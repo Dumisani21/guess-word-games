@@ -4,52 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
   </head>
   <body>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      .container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100vw;
-        height: 100vh;
-      }
-
-      .board {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-        font-size: 50px;
-        background-color: green;
-        width: 400px;
-        height: 200px;
-        border-radius: 20px 20px;
-      }
-
-      .words {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        width: 400px;
-      }
-
-      .words .letter {
-        padding: 10px;
-        background-color: aquamarine;
-        margin: 5px;
-      }
-    </style>
     <div class="container">
       <div class="title">
         <h1>Guess The missing letter</h1>
@@ -70,6 +28,7 @@
         ><span class="letter">W</span><span class="letter">X</span
         ><span class="letter">Y</span><span class="letter">Z</span>
       </div>
+      <button class="reset hidden" type="button">RESET</button>
     </div>
 
     <script src="./index.js"></script>

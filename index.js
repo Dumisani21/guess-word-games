@@ -30,6 +30,7 @@ const words = [
 const wordBox = document.querySelector('.words')
 const board = document.querySelector('.board')
 const letter = document.querySelectorAll('.letter')
+const hidden = document.querySelector('.reset')
 
 // Functions
 function ranGen(arg){
@@ -113,10 +114,9 @@ letter.forEach((item) => {
         const x = e.target.textContent.toLowerCase()
         if(wrong === 5){
             board.textContent = "You Lose!!!"
+            wordBox.classList.add('hidden')
+            hidden.classList.remove('hidden')
             resetBtn()
-        }
-        if(wrong > 5){
-            location.reload()
         }
         if(guessWord.letter === x){
             location.reload()
@@ -133,4 +133,7 @@ letter.forEach((item) => {
 // event functions
 // window.onload = addWords
 
-
+hidden.onclick = (e) => {
+    e.preventDefault()
+    location.reload()
+}
